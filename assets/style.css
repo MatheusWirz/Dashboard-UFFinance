@@ -1,0 +1,226 @@
+/*
+    CSS
+    Fonte: Google Sans Flex
+    Autor: Matheus Wirz (UFFinance)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+:root {
+    --bg-principal: #010319;
+    --card-bg: #010319;
+    --texto-branco: white;
+    --borda-suave: 1px solid #333;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Google Sans Flex';
+    background-color: var(--bg-principal);
+    color: var(--texto-branco);
+}
+
+/* HOME PAGE */
+
+body[data-path='home'] {
+    background-image: url('./bg-image.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body[data-path='home'] .nav-bar, body[data-path='home'] .footer {
+    display: none;
+}
+
+/* LAYOUT */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.conteudo-pagina {
+    flex: 1;
+    padding: 20px;
+}
+
+/* COMPONENTES */
+
+.centered-category {
+    text-align: center;
+}
+
+.card-menu {
+    width: 150px;
+    padding: 30px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    border: var(--borda-suave);
+    border-radius: 12px;
+    background-color: var(--bg-principal);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.card-menu:hover {
+    transform: translateY(-5px);
+    border-color: aliceblue;
+    box-shadow: 0 10px 20px rgba(78, 140, 255, 0.2);
+}
+
+.card-menu h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--texto-branco);
+}
+
+.card {
+    padding: 10px;
+}
+
+/* GRIDS */
+
+.grid-menu-home {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-2-colunas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* BARRAS */
+
+.warn-top-bar {
+    display: none;
+}
+
+.top-bar, .nav-bar, .footer {
+    text-align: center;
+    background-color: var(--bg-principal);
+}
+
+.top-bar {
+    padding: 5px 0;
+}
+
+.top-bar img {
+    max-width: 250px;
+}
+
+.nav-bar {
+    padding: 10px 0;
+    background-color: var(--bg-principal);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-bar a {
+    color: var(--texto-branco);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    padding: 20px 0;
+    margin-top: auto;
+    border-top: var(--borda-suave);
+    font-size: 0.9rem;
+}
+.footer p {
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.main-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 0;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    .warn-top-bar {
+        display: block;
+        background-color: white;
+        color: black;
+        text-align: center;
+    }
+    
+    .container {
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .conteudo-pagina {
+        padding: 10px;
+    }
+
+    .grid-2-colunas {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .centered-category {
+        margin-bottom: 20px;
+    }
+
+    .grid-menu-home {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-menu {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .top-bar img {
+        max-width: 180px;
+    }
+
+    .nav-bar {
+        padding: 15px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-bar a {
+        margin: 5px;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        background-color: var(--card-bg);
+        border-radius: 4px
+    }
+
+    .js-plotly-plot .plotly .main-svg {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+}
