@@ -27,6 +27,5 @@ layout = html.Div(className='main-banner', children=[
             html.H3(page['name'])
         ])
         for page in dash.page_registry.values()
-        if page['relative_path'] != '/'
     ])
 ])
