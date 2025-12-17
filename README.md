@@ -44,7 +44,7 @@ Siga estes passos para executar o dashboard na sua máquina:
 
 1. **Clone o repositório**
    ```bash
-   git clone [https://github.com/MatheusWirz/Dashboard-UFFinance.git](https://github.com/MatheusWirz/Dashboard-UFFinance.git)
+   git clone https://github.com/MatheusWirz/Dashboard-UFFinance.git
    cd Dashboard-UFFinance
 
 2. **Crie um ambiente virtual**
@@ -67,3 +67,17 @@ Siga estes passos para executar o dashboard na sua máquina:
 
 5. **Acesse o localhost**
    O dashboard estará disponível em: http://127.0.0.1:8050/
+
+## 📂 Estrutura do Projeto
+app.py: Ponto de entrada da aplicação. Configura o servidor e o layout base.
+
+pages/: Contém as páginas individuais (Brasil, EUA, Commodities, Home).
+
+functions.py: Módulo central de lógica. Contém os conectores de API (BCB, FRED, IBGE) e funções de estilização de gráficos.
+
+assets/: Arquivos estáticos (CSS, Imagens, Scripts JS).
+
+
+
+### _dúvidas ou sugestões?_
+[Contato - Matheus Wirz](https://www.linkedin.com/in/matheuswirz/)
