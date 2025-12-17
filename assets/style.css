@@ -34,6 +34,8 @@ body[data-path='home'] .nav-bar, body[data-path='home'] .footer {
     display: none;
 }
 
+
+
 /* LAYOUT */
 
 .container {
@@ -84,6 +86,10 @@ body[data-path='home'] .nav-bar, body[data-path='home'] .footer {
 /* GRIDS */
 
 .grid-menu-home {
+    display: none;
+}
+
+body[data-path='home'] .grid-menu-home {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;

@@ -22,10 +22,5 @@ layout = html.Div(className='main-banner', children=[
         html.P('Selecione qualquer categoria para monitorar.'),
         html.Ol('')
     ]),
-    html.Div(className='grid-menu-home', children=[
-        dcc.Link(href=page['relative_path'], className='card-menu', children=[
-            html.H3(page['name'])
-        ])
-        for page in dash.page_registry.values()
-    ])
+    
 ])

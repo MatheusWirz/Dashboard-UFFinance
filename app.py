@@ -37,6 +37,13 @@ app.layout = html.Div(className='container', children=[
            dash.page_container, # puxando as pages
     ]),
 
+    html.Div(className='grid-menu-home', children=[
+        dcc.Link(href=page['relative_path'], className='card-menu', children=[
+            html.H3(page['name'])
+        ])
+        for page in dash.page_registry.values()
+    ]),
+
     html.Div(className='footer', children=[
         html.P('UFFinance - A Liga de Mercado Financeiro da UFF'),
         html.P('Instagram @uffinance'),
