@@ -35,13 +35,14 @@ app.layout = html.Div(className='container', children=[
 
     html.Div(className='conteudo-pagina', children=[
            dash.page_container, # puxando as pages
-    ]),
-
-    html.Div(className='grid-menu-home', children=[
-        dcc.Link(href=page['relative_path'], className='card-menu', children=[
-            html.H3(page['name'])
-        ])
-        for page in dash.page_registry.values()
+           
+           html.Div(className='grid-menu-home', children=[
+                dcc.Link(href=page['relative_path'], className='card-menu', children=[
+                    html.H3(page['name'])
+                ])
+                for page in dash.page_registry.values()
+                if page['relative_path'] != '/'
+            ]),
     ]),
 
     html.Div(className='footer', children=[

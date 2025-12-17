@@ -22,5 +22,4 @@ layout = html.Div(className='main-banner', children=[
         html.P('Selecione qualquer categoria para monitorar.'),
         html.Ol('')
     ]),
-    
 ])
